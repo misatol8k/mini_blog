@@ -4,7 +4,7 @@ require 'rails/all'
 
 Bundler.require(*Rails.groups)
 
-module MiniBlog
+module PetitBlog
   class Application < Rails::Application
     config.load_defaults 5.2
     config.time_zone = 'Tokyo'
