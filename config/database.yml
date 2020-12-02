@@ -7,12 +7,12 @@ default: &default
 
 development:
   <<: *default
-  database: mini_blog_development
+  database: petit_blog_development
 test:
   <<: *default
-  database: mini_blog_test
+  database: petit_blog_test
 production:
   <<: *default
-  database: mini_blog_production
-  username: mini_blog
-  password: <%= ENV['MINI_BLOG_DATABASE_PASSWORD'] %>
+  database: petit_blog_production
+  username: petit_blog
+  password: <%= ENV['PETIT_BLOG_DATABASE_PASSWORD'] %>
