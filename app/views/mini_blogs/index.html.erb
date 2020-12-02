@@ -7,6 +7,7 @@
   <tr>
     <td><%= mini_blog.content %></td>
     <td><%= link_to "編集", edit_mini_blog_path(mini_blog.id) %></td>
+    <td><%= link_to '削除', mini_blog_path(mini_blog.id), method: :delete ,data: { confirm: '本当に削除しますか？' } %></td>
   </tr>
 <% end %>
 </table>
