@@ -1,17 +1,2 @@
-<%= form_with(model: @mini_blog, local: true ) do |form| %>
-  <% if @mini_blog.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= @mini_blog.errors.count %>件のエラーがあります。</h2>
-      <ul>
-      <% @mini_blog.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="mini_blog_content">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
-  </div>
-  <%= form.submit %>
-<% end %>
+<h2>ブログを編集する</h2>
+<%= render 'form' %>
