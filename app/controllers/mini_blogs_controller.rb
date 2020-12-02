@@ -17,6 +17,11 @@ class MiniBlogsController < ApplicationController
       end
     end
   end
+  def confirm
+    @mini_blog = MiniBlog.new(mini_blog_params)
+    render :new if @mini_blog.invalid?
+  end
+
   private
   def mini_blog_params
     params.require(:mini_blog).permit(:content)
