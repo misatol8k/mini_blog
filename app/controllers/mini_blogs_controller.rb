@@ -1,4 +1,5 @@
 class MiniBlogsController < ApplicationController
+  before_action :set_blog, only: [:edit, :update,]
   def index
     @mini_blogs = MiniBlog.all
   end
@@ -21,9 +22,21 @@ class MiniBlogsController < ApplicationController
     @mini_blog = MiniBlog.new(mini_blog_params)
     render :new if @mini_blog.invalid?
   end
+  def edit
+  end
+  def update
+    if @mini_blog.update(mini_blog_params)
+      redirect_to mini_blogs_path, notice: "ブログを編集しました！"
+    else
+      render :edit
+    end
+  end
 
   private
   def mini_blog_params
     params.require(:mini_blog).permit(:content)
+  end
+  def set_blog
+    @mini_blog = MiniBlog.find(params[:id])
   end
 end

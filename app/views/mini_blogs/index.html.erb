@@ -6,6 +6,7 @@
 <% @mini_blogs.each do |mini_blog| %>
   <tr>
     <td><%= mini_blog.content %></td>
+    <td><%= link_to "編集", edit_mini_blog_path(mini_blog.id) %></td>
   </tr>
 <% end %>
 </table>
