@@ -6,10 +6,26 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'normalize', media: 'all' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <header>
+      <div class="container">
+      <p>
+        <%= image_tag "pen.png" %>
+      </p>
+      <h2>Mini blog</h2>
+      <p>
+        <%= image_tag "penguin3.png" %>
+      </p>
+    </div>
+  </header>
+  <div class="article">    
     <%= yield %>
+  </div>
+    <footer>
+      <p>株式会社ぺんぎんクレイシ</p>
+    </footer>
   </body>
 </html>
