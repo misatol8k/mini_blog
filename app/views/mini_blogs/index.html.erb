@@ -1,4 +1,5 @@
-<h1>ブログ一覧</h1>
+<h2>ブログ一覧</h2>
+<p class="notice"><%= notice %></p>
 <table>
   <tr>
     <th>内容</th>
@@ -6,6 +7,10 @@
 <% @mini_blogs.each do |mini_blog| %>
   <tr>
     <td><%= mini_blog.content %></td>
+    <td class="edit"><%= link_to "編集", edit_mini_blog_path(mini_blog.id) %></td>
+    <td class="edit"><%= link_to '削除', mini_blog_path(mini_blog.id), method: :delete ,data: { confirm: '本当に削除しますか？' } %></td>
   </tr>
 <% end %>
 </table>
+<br>
+<%= link_to 'ブログ新規作成画面に移動する', new_mini_blog_path %>

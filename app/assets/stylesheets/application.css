@@ -13,3 +13,48 @@
  *= require_tree .
  *= require_self
  */
+ html {
+   position: relative;
+   min-height: 100%;
+ }
+header {
+  background-color: #fff8cf;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container p {
+  margin: 10px;
+}
+body {
+  text-align: center;
+  background-image: linear-gradient(#ffffff 50%, #fff8cf 80%);
+}
+.article {
+  max-width: 800px;
+  text-align: left;
+  margin: 0% 10%;
+  line-height: 1.5;
+  padding-right: 3px;
+}
+.edit {
+  padding-right: 5px;
+  min-width: 2.5em;
+}
+.mini_blog_content {
+  padding: 10px;
+  margin: 5px;
+}
+.notice {
+  color: #3b82c4;
+}
+footer {
+  background-color: #fff8cf;
+  height: 3em;
+}
+footer p {
+  font-size: 0.8em;
+  padding-top: 1.2em;
+}
